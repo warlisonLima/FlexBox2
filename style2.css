@@ -14,7 +14,10 @@
 
 
 
-*{margin: 0;padding: 0;}
+* {
+    margin: 0;
+    padding: 0;
+}
 
 /*
 #c5ebd6
@@ -25,7 +28,7 @@
 #063d1e
 
 */
-:root{
+:root {
     --cor0: #c5ebd6;
     --cor1: #83e1ad;
     --cor2: #3ddc84;
@@ -49,6 +52,13 @@ body {
     font-family: var(--fonte-padrao);
 }
 
+body p {
+    text-indent: 50px;
+    font-family: var(--fonte-padrao);
+    text-align: justify;
+    padding: 10px 0px 10px 0px;
+}
+
 header {
     background-color: var(--cor4);
 }
@@ -59,9 +69,10 @@ header {
     width: 100%;
 
 }
+
 #menu-principal li {
     width: 20%;
-    background-color:var(--cor3);
+    background-color: var(--cor3);
     display: block;
     float: left;
     padding-top: 10px;
@@ -70,13 +81,14 @@ header {
     text-decoration: none;
     transition-duration: 0.5s;
     text-align: center;
-    
+
 }
 
 #menu-principal li a {
     color: var(--cor6);
     text-decoration: none;
 }
+
 .dropdown {
     visibility: hidden;
     position: absolute;
@@ -84,11 +96,11 @@ header {
     transition: all 0.5 ease;
     margin-top: 10px;
     display: none;
-    
+
 }
+
 #menu-principal li:hover,
-#menu-principal li:focus-within
-#menu-principal li a:hover {
+#menu-principal li:focus-within #menu-principal li a:hover {
     background-color: var(--cor1);
     cursor: pointer;
     font-weight: bold;
@@ -109,18 +121,20 @@ header {
 
 /*____________________________________ fim do menu*/
 
-header > h1 {
+header>h1 {
     text-align: center;
     color: white;
     font-family: var(--fonte-destaque);
-    
+
 }
-header > p {
+
+header>p {
     text-align: center;
     color: white;
     font-family: var(--fonte-destaque);
 }
-header > p {
+
+header>p {
     color: var(--cor6);
     padding: 10px 0px 10px 0px;
 }
@@ -135,34 +149,32 @@ main {
     margin: auto;
     min-width: 280px;
     max-width: 800px;
-    
+
 }
-img { /* apagar depois */
+
+img {
+    /* apagar depois */
     /*width: 100%;*/
     display: flex;
     margin: auto;
 
 }
 
-main > article > h1 {
+
+
+main>article>h1 {
     color: var(--cor5);
     font-family: var(--fonte-android);
     padding: 10px 0px 10px 0px;
 }
 
-main > article > h2 {
+main>article>h2 {
     color: var(--cor5);
     padding: 10px 0px 10px 0px;
     font-family: var(--fonte-android);
 }
-main > article > p {
-    font-family: var(--fonte-padrao);
-    text-align: justify;
-    text-indent: 50px;
-    padding: 10px 0px 10px 0px;
 
-}
-.linkgeral{
+.linkgeral {
     color: var(--cor6);
     background-color: #063d1e;
     text-decoration: none;
@@ -179,9 +191,8 @@ main > article > p {
 #evolucao {
     display: flex;
     flex-flow: row wrap;
-    background-color: var(--cor2);
-    font-size: 1 em;
-    
+    font-size: 1em;
+
 }
 
 #evolucao h3 {
@@ -200,119 +211,189 @@ main > article > p {
     margin: 10px;
     background-color: var(--cor0);
     flex: 250px;
-}/*---------fim---------*/
+}
 
+/*---------fim---------*/
+
+
+
+
+
+/*______________________INICIO______________________*/
 /* flexBox INICIO*/
 /*[Quer Aprender Mais]*/
+aside {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 
-#aprenderMais{ /* itens */
+aside h3 {
+    text-align: center;
+    font-family: var(--fonte-android);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* flexBox pai */
+#aprenderMais {
+    /* pai */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+#aprenderMais li {
+    list-style: none;
+    text-decoration: none;
+
+}
+
 /* flexBox itens */
-.cont { /* pai*/
+.cont {
+    /* itens*/
     padding: 10px;
     margin: 10px;
-    background-color: #2fa866;
-    flex: 200px;
-    
-}/*---------fim---------*/
+    border: 3px solid black;
+    flex: 250px;
+
+}
+
+/*---------fim---------*/
+/* colocando a img verficar no aprender mais */
+.verificar {
+    display: inline;
+}
+
+/*----------------------FIM----------------------*/
 
 
-
+/*______________________INICIO______________________*/
+/* roda pe */
 footer {
     background-color: var(--cor5);
-    color:var(--cor6);
+    color: var(--cor6);
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
 }
-    
-footer > a {
-   
+
+footer>a {
     color: var(--cor6);
 }
 
+footer>p {
+    text-indent: 0px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/*----------------------FIM----------------------*/
+
 
 /* AJUSTAR O CONTEÚDO PARA SMARTPHONES  */
-@media screen and (max-width:480px){
+@media screen and (max-width:480px) {
     body {
         max-width: 480px;
         font-size: 0.85em;
 
     }
 
-/*configurar o menu principal */
+    /*configurar o menu principal */
     /* menu */
-#navegacao-principal{
-   width: auto;
-   height: auto;
-   background-color: red;
+    #navegacao-principal {
+        width: auto;
+        height: auto;
+        background-color: red;
+    }
+
+    nav#navegacao-principal li {
+        width: 100%;
+        color: black;
+        text-decoration: none;
+    }
+
+    #menu-principal li a {
+        color: white;
+        text-align: left;
+        display: block;
+        outline: none;
+    }
+
+    #menu-principal li:hover,
+    #menu-principal li:focus-within,
+    #menu-principal li a:hover {
+        background-color: var(--cor5);
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.1s;
+        left: 20px;
+        color: violet;
+    }
+
+    .dropdown {
+        position: static;
+        left: 0px;
+        list-style: none;
+    }
+
+    /* fim menu*/
+
+
+    /* configurando flex box */
+    /*[ EVOLUÇÃO]*/
+
+    .evl {
+        background-color: var(--cor6);
+
+    }
+
+    /*---------fim---------*/
+
 }
-nav#navegacao-principal li {
-    width: 100%;
-    color: black;
-    text-decoration: none;
-}
 
-#menu-principal li a {
-    color: white;
-    text-align: left;
-    display: block;
-    outline: none;
-}
-#menu-principal li:hover,
-#menu-principal li:focus-within,
-#menu-principal li a:hover {
-    background-color: var(--cor5);
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.1s;
-    left: 20px;
-    color: violet;
-}
-.dropdown {
-    position: static;
-    left:0px;
-    list-style: none;
-}/* fim menu*/
+@media screen and (max-width:800px) {
 
-
-/* configurando flex box */
-
-
-
-
-}
-
-@media screen and (max-width:800px){
-
-   main > article > h1 {
+    main>article>h1 {
         color: var(--cor7);
     }
-    main > article > h2{
+
+    main>article>h2 {
         color: var(--cor7);
     }
-    p{
+
+    p {
         color: var(--cor8);
     }
-    .linkgeral{
+
+    .linkgeral {
         color: var(--cor6);
         background-color: #063d1e;
     }
+
     main {
         background-color: var(--cor0);
 
     }
 
-    aside > ul > li{
+    aside>ul>li {
         color: var(--cor6);
         padding: 5px;
-        
+
     }
-  
-    
+
+    /* configurando flex box */
+    /*[ EVOLUÇÃO]*/
+
+    .evl {
+        background-color: var(--cor6);
+
+    }
+
+    /*---------fim---------*/
+
+
+
 
 
 }
