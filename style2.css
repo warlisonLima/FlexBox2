@@ -235,11 +235,11 @@ footer > a {
 }
 
 
-/* AJUSTAR O CONTEÚDO PARA SMARTPHONES*/
+/* AJUSTAR O CONTEÚDO PARA SMARTPHONES  */
 @media screen and (max-width:480px){
     body {
         max-width: 480px;
-        font-size: 0.8em;
+        font-size: 0.85em;
 
     }
 
