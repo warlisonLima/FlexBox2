@@ -8,26 +8,11 @@
     font-weight: normal;
 }
 
-
-
-
-
-
-
 * {
     margin: 0;
     padding: 0;
 }
 
-/*
-#c5ebd6
-#83e1ad
-#3ddc84
-#2fa866
-#1a5c37
-#063d1e
-
-*/
 :root {
     --cor0: #c5ebd6;
     --cor1: #83e1ad;
@@ -36,14 +21,15 @@
     --cor4: #1a5c37;
     --cor5: #063d1e;
     --cor6: #ffffff;
-    --cor7: #ff0000;
+    --cor7: #F22727;
     --cor8: black;
-
+    --cor9: #F2E205;
+    --cor11: #05F240;
+    --cor12: #2E83F2;
+    --cor13: #1D64F2;
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Titillium', 'cursive';
     --fonte-android: 'Android', 'cursive';
-
-
 }
 
 body {
@@ -53,21 +39,38 @@ body {
 }
 
 body p {
-    text-indent: 50px;
+    text-indent: 40px;
     font-family: var(--fonte-padrao);
     text-align: justify;
-    padding: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
 }
 
+/*______________________INICIO______________________*/
+/*               [CONFIGURANDO O MENU]              */
 header {
     background-color: var(--cor4);
 }
 
-/* menu */
-#navegacao-principal ul li ul li {
-    display: block;
-    width: 100%;
+header>h1 {
+    text-align: center;
+    color: white;
+    font-family: var(--fonte-destaque);
+    padding: 15px 0px 5px 0px;
+}
 
+header>p {
+    text-align: center;
+    font-family: var(--fonte-destaque);
+    padding: 7px 0px 5px 0px;
+    color: var(--cor6);
+}
+
+nav {
+    background-color: var(--cor5);
+}
+
+#navegacao-principal ul li ul li {
+    width: 100%;
 }
 
 #menu-principal li {
@@ -75,13 +78,11 @@ header {
     background-color: var(--cor3);
     display: block;
     float: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 15px 0px 10px 0px;
     position: relative;
     text-decoration: none;
     transition-duration: 0.5s;
     text-align: center;
-
 }
 
 #menu-principal li a {
@@ -96,20 +97,19 @@ header {
     transition: all 0.5 ease;
     margin-top: 10px;
     display: none;
-
 }
 
 #menu-principal li:hover,
-#menu-principal li:focus-within #menu-principal li a:hover {
+#menu-principal li:focus-within,
+#menu-principal li a:hover {
     background-color: var(--cor1);
     cursor: pointer;
     font-weight: bold;
     transition: 0.1s;
 }
 
-
 #menu-principal li:hover>ul,
-#menu-principal li:focus-within,
+
 .dropdown ul:hover,
 .dropdown ul:focus {
     visibility: visible;
@@ -118,59 +118,37 @@ header {
     background-color: var(--cor5);
 }
 
+/*----------------------FIM----------------------*/
 
-/*____________________________________ fim do menu*/
 
-header>h1 {
-    text-align: center;
-    color: white;
-    font-family: var(--fonte-destaque);
 
-}
 
-header>p {
-    text-align: center;
-    color: white;
-    font-family: var(--fonte-destaque);
-}
-
-header>p {
-    color: var(--cor6);
-    padding: 10px 0px 10px 0px;
-}
-
-nav {
-    background-color: var(--cor5);
-}
-
+/*______________________INICIO______________________*/
+/*        [CONFIGURANDO CORPO PRINCIPAL]            */
 main {
     background-color: var(--cor6);
     padding: 20px;
     margin: auto;
     min-width: 280px;
     max-width: 800px;
-
 }
 
 img {
-    /* apagar depois */
-    /*width: 100%;*/
     display: flex;
     margin: auto;
-
 }
-
-
 
 main>article>h1 {
     color: var(--cor5);
     font-family: var(--fonte-android);
     padding: 10px 0px 10px 0px;
+    margin-top: 35px;
+    text-align: center;
 }
 
 main>article>h2 {
     color: var(--cor5);
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0px 0px 0px;
     font-family: var(--fonte-android);
 }
 
@@ -183,7 +161,6 @@ main>article>h2 {
 .linkgeral:hover {
     background-color: red;
     cursor: pointer;
-
 }
 
 /* flexBox INICIO*/
@@ -192,7 +169,6 @@ main>article>h2 {
     display: flex;
     flex-flow: row wrap;
     font-size: 1em;
-
 }
 
 #evolucao h3 {
@@ -213,15 +189,11 @@ main>article>h2 {
     flex: 250px;
 }
 
-/*---------fim---------*/
-
-
-
+/*----------------------FIM----------------------*/
 
 
 /*______________________INICIO______________________*/
-/* flexBox INICIO*/
-/*[Quer Aprender Mais]*/
+/*               [Quer Aprender Mais]               */
 aside {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -245,7 +217,6 @@ aside h3 {
 #aprenderMais li {
     list-style: none;
     text-decoration: none;
-
 }
 
 /* flexBox itens */
@@ -255,11 +226,8 @@ aside h3 {
     margin: 10px;
     border: 3px solid black;
     flex: 250px;
-
 }
 
-/*---------fim---------*/
-/* colocando a img verficar no aprender mais */
 .verificar {
     display: inline;
 }
@@ -296,7 +264,7 @@ footer>p {
     body {
         max-width: 480px;
         font-size: 0.85em;
-
+        background-color: var(--cor6);
     }
 
     /*configurar o menu principal */
@@ -304,7 +272,7 @@ footer>p {
     #navegacao-principal {
         width: auto;
         height: auto;
-        background-color: red;
+
     }
 
     nav#navegacao-principal li {
@@ -336,24 +304,9 @@ footer>p {
         left: 0px;
         list-style: none;
     }
-
-    /* fim menu*/
-
-
-    /* configurando flex box */
-    /*[ EVOLUÇÃO]*/
-
-    .evl {
-        background-color: var(--cor6);
-
-    }
-
-    /*---------fim---------*/
-
 }
 
 @media screen and (max-width:800px) {
-
     main>article>h1 {
         color: var(--cor7);
     }
@@ -368,7 +321,7 @@ footer>p {
 
     .linkgeral {
         color: var(--cor6);
-        background-color: #063d1e;
+        background-color: var(--cor2);
     }
 
     main {
@@ -381,19 +334,101 @@ footer>p {
         padding: 5px;
 
     }
+}
 
-    /* configurando flex box */
-    /*[ EVOLUÇÃO]*/
-
-    .evl {
-        background-color: var(--cor6);
+@media screen and (max-width:725px) {
+    main > article > h1 {
+        color: var(--cor12);
+    }
+    main > article > h2 {
+        color: var(--cor12);
+    }
+    main > aside > h3 {
+        color: var(--cor12);
+       
+    }
+    p {
+        color: var(--cor8);
+    }
+    .linkgeral {
+        color: var(--cor6);
+        background-color: var(--cor2);
+    }
+    main {
+        background-color: var(--cor9);
 
     }
+    aside > ul > li {
+        color: var(--cor12);
+        padding: 5px;
+    }
+    .evl {
+        background-color: var(--cor1);
 
-    /*---------fim---------*/
+    }
+}
 
 
+@media screen and (max-width:625px) {
+    main > article > h1 {
+        color: var(--cor12);
+    }
+    main > article > h2 {
+        color: var(--cor12);
+    }
+    main > aside > h3 {
+        color: var(--cor12);
+       
+    }
+    p {
+        color: var(--cor8);
+    }
+    .linkgeral {
+        color: var(--cor6);
+        background-color: var(--cor2);
+    }
+    main {
+        background-color: var(--cor10);
 
+    }
+    aside > ul > li {
+        color: var(--cor12);
+        padding: 5px;
+    }
+    .evl {
+        background-color: var(--cor12);
 
+    }
+}
 
+@media screen and (max-width:540px) {
+    main > article > h1 {
+        color: var(--cor6);
+    }
+    main > article > h2 {
+        color: var(--cor6);
+    }
+    main > aside > h3 {
+        color: var(--cor12);
+       
+    }
+    p {
+        color: var(--cor8);
+    }
+    .linkgeral {
+        color: var(--cor6);
+        background-color: var(--cor2);
+    }
+    main {
+        background-color: var(--cor7);
+
+    }
+    aside > ul > li {
+        color: var(--cor12);
+        padding: 5px;
+    }
+    .evl {
+        background-color: var(--cor7);
+
+    }
 }
