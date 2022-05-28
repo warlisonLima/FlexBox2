@@ -43,30 +43,15 @@ body p {
     font-family: var(--fonte-padrao);
     text-align: justify;
     padding: 5px 0px 5px 0px;
+    line-height: 2em;
 }
 
 /*______________________INICIO______________________*/
 /*               [CONFIGURANDO O MENU]              */
-header {
-    background-color: var(--cor4);
-}
-
-header>h1 {
-    text-align: center;
-    color: white;
-    font-family: var(--fonte-destaque);
-    padding: 15px 0px 5px 0px;
-}
-
-header>p {
-    text-align: center;
-    font-family: var(--fonte-destaque);
-    padding: 7px 0px 5px 0px;
-    color: var(--cor6);
-}
 
 nav {
     background-color: var(--cor5);
+    
 }
 
 #navegacao-principal ul li ul li {
@@ -83,11 +68,13 @@ nav {
     text-decoration: none;
     transition-duration: 0.5s;
     text-align: center;
+   
 }
 
 #menu-principal li a {
     color: var(--cor6);
     text-decoration: none;
+    
 }
 
 .dropdown {
@@ -97,6 +84,7 @@ nav {
     transition: all 0.5 ease;
     margin-top: 10px;
     display: none;
+    
 }
 
 #menu-principal li:hover,
@@ -106,16 +94,17 @@ nav {
     cursor: pointer;
     font-weight: bold;
     transition: 0.1s;
+   
 }
 
 #menu-principal li:hover>ul,
-
 .dropdown ul:hover,
 .dropdown ul:focus {
     visibility: visible;
     opacity: 1;
     display: block;
     background-color: var(--cor5);
+    
 }
 
 /*----------------------FIM----------------------*/
@@ -125,37 +114,80 @@ nav {
 
 /*______________________INICIO______________________*/
 /*        [CONFIGURANDO CORPO PRINCIPAL]            */
+header {
+    background-color: var(--cor4);
+    min-height: 120px;
+    padding-top: 40px;
+}
+
+header > h1 {
+    text-align: center;
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    padding: 15px 0px 15px 0px;
+    text-shadow: 2px 5px 5px red;
+}
+
+header > p {
+    text-align: center;
+    font-family: var(--fonte-destaque);
+    font-size: 1.5em;
+    padding: 7px 0px 15px 0px;
+    color: var(--cor6);
+}
+
+
+
 main {
     background-color: var(--cor6);
     padding: 20px;
     margin: auto;
     min-width: 280px;
     max-width: 800px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 img {
+     
     display: flex;
     margin: auto;
 }
 
-main>article>h1 {
+main > article > h1 {
     color: var(--cor5);
     font-family: var(--fonte-android);
+    font-size: 2em;
     padding: 10px 0px 10px 0px;
     margin-top: 35px;
     text-align: center;
+    text-shadow: 2px 2px 0px red;
 }
 
-main>article>h2 {
+main > article > h2 {
     color: var(--cor5);
-    padding: 10px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     font-family: var(--fonte-android);
+    background-image: linear-gradient(to right,var(--cor1), transparent);
+    text-indent: 10px;
 }
+main  strong {
+    font-weight: bolder;
+    padding: 2px 6px;
+    background-color: var(--cor1);
 
+}
 .linkgeral {
     color: var(--cor6);
-    background-color: #063d1e;
+    background-color: var(--cor12);
     text-decoration: none;
+}
+
+.linkgeral::after {
+    content: '\1F517';
+
+
 }
 
 .linkgeral:hover {
@@ -195,15 +227,40 @@ main>article>h2 {
 /*______________________INICIO______________________*/
 /*               [Quer Aprender Mais]               */
 aside {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    background-color: var(--cor2);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0,0.5);
 }
 
-aside h3 {
+aside > h3 {
     text-align: center;
     font-family: var(--fonte-android);
     padding-top: 5px;
     padding-bottom: 5px;
+    background-color: var(--cor5);
+    margin: -10px -10px 0px -10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: var(--cor6);
+    
+}
+
+div.video {
+    background-color: var(--cor2);
+    margin: 0px -20px 30px -20px;
+    padding-bottom: 50%;
+
+    position: relative;
+}
+
+div.video iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
 }
 
 /* flexBox pai */
@@ -212,6 +269,8 @@ aside h3 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
+    
 }
 
 #aprenderMais li {
